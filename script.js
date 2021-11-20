@@ -6,5 +6,9 @@ const btnCloseModal = document.querySelector('.close-modal')
 const btnsSHowModal = document.querySelectorAll('.show-modal')
 
 for(let i =0; i < btnsSHowModal.length; i++){
-    console.log(btnsSHowModal[i].textContent);
+    btnsSHowModal[i].addEventListener('click', function(){
+        
+        console.log('Button Clicked');
+        modal.classList.remove('hidden')
+    });
 }
