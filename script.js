@@ -10,5 +10,6 @@ for(let i =0; i < btnsSHowModal.length; i++){
         
         console.log('Button Clicked');
         modal.classList.remove('hidden')
+        overlay.classList.remove('hidden')
     });
 }
