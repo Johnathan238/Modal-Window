@@ -13,13 +13,11 @@ for(let i =0; i < btnsSHowModal.length; i++){
         overlay.classList.remove('hidden')
     });
 }
-
-btnCloseModal.addEventListener('click', function(){
+const closeModalFam = function (){
     modal.classList.add('hidden')
     overlay.classList.add('hidden')
-})
+}
 
-overlay.addEventListener('click', function(){
-    modal.classList.add('hidden')
-    overlay.classList.add('hidden')
-})
+btnCloseModal.addEventListener('click', closeModalFam)
+
+overlay.addEventListener('click', closeModalFam)
