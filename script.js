@@ -22,6 +22,6 @@ btnCloseModal.addEventListener('click', closeModalFam)
 
 overlay.addEventListener('click', closeModalFam)
 
-document.addEventListener('keydown', function(){
-    
+document.addEventListener('keydown', function(e){
+    console.log(e);
 })
