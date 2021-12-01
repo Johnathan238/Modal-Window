@@ -21,3 +21,7 @@ const closeModalFam = function (){
 btnCloseModal.addEventListener('click', closeModalFam)
 
 overlay.addEventListener('click', closeModalFam)
+
+document.addEventListener('keydown', function(){
+    
+})
