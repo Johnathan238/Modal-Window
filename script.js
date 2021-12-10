@@ -5,32 +5,30 @@ const overlay = document.querySelector('.overlay')
 const btnCloseModal = document.querySelector('.close-modal')
 const btnsSHowModal = document.querySelectorAll('.show-modal')
 
+const openModal = function () {
+  modal.classList.remove('hidden')
+  overlay.classList.remove('hidden')
+}
+
 for (let i = 0; i < btnsSHowModal.length; i++) {
-  console.log('====================================');
-  console.log(btnsSHowModal[i].textContent);
-  console.log('====================================');
+  btnsSHowModal[i].addEventListener('click', openModal)
+}
+const closeModalFam = function () {
+  modal.classList.add('hidden')
+  overlay.classList.add('hidden')
 }
 
+btnCloseModal.addEventListener('click', closeModalFam)
 
-function spinWords(string) {
-  //TODO Have fun :)
+overlay.addEventListener('click', closeModalFam)
 
-  //From MDN 
-  return string.split("").reverse().join("")
+document.addEventListener('keydown', function (e) {
+  console.log(e.key);
 
-  // My work
-  // for (let i = spinWords().length - 1; i > 0; i -= 1) {
-  //   spinWords().reverse
-  // }
-
-  // let rWords = rWords.reverse()
-
-  // return rWords
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModalFam()
+  }
+})
 
 
-
-}
-
-console.log('====================================');
-console.log(spinWords("Nani"));
-console.log('====================================');
+//Not sure but my iterm is not working
